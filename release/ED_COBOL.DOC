@@ -1,0 +1,260 @@
+               EDITEUR DE FICHIERS SOURCES EN COBOL.
+
+   Ce  logiciel  est  un  petit  ‚diteur  de   textes   pour   les 
+utilisateurs du langage Cobol.
+
+   J'essai de garder une compatibilit‚ croissante dans les options 
+que je met dans mes programmes, ce qui est dit  dans  une  version 
+est donc valable pour les suivantes (sauf pr‚cision contraire).
+
+******************************************************************
+   ED_COBOL 1.0: (31/12/1990)
+
+* Ce programme permet de  taper  des  listings  de  programmes  en 
+Cobol, l'‚diteur commence en colonne 7, et s'arrŠte en colonne 72.
+
+* Utilisez les flŠches pour d‚placer le curseur, DEL pour  effacer 
+le caractŠre courant, et  BACKSPACE  pour  effacer  le  pr‚c‚dent. 
+L'appuit sur RETURN fait  passer  …  la  ligne  suivante.
+
+* Les listings de programmes en Cobol ne pourront pas d‚passer 900 
+lignes, c'est … cause de la place qu'ils prennent en m‚moire, j'ai 
+programm‚ cette version en Pascal,  et  les  types  structur‚s  ne 
+peuvent pas d‚passer 64 Ko de m‚moire. Je pense r‚gler le problŠme 
+un jour...
+
+* Utilisez les touches de fonction pour sauver votre listing, 
+charger un  autre  programme,  effacer  le  programme  courant  ou 
+quitter l'‚diteur.
+
+******************************************************************
+   ED_COBOL 1.1: (19/01/1991)
+
+* Cette version corrige les nombreuses erreurs de programmation de 
+la pr‚c‚dente, avec quelques ajouts.
+
+* L'appuit sur TAB permet de passer de la colonne 7, … la marge A, 
+puis … la marge B. AprŠs la  marge  B,  la  touche  TAB  insere  5 
+espaces … partir de la position du curseur.
+
+* Rajout d'options dans la barre de menu. Il suffit  de  lire  les 
+‚crans de presentation pour comprendre leur fonctionnement !
+
+******************************************************************
+   ED_COBOL 1.2: (26/01/1991)
+
+* Rajout de racourcis clavier, les ‚crans d'aide sont inclus  dans 
+le programme.
+
+* Modification de l'affichage du listing … l'‚cran.
+
+******************************************************************
+   ED_COBOL 1.3: (09/02/1991)
+
+* Modification de certaines erreurs dues aux  conflits  entre  les 
+touches de racourcis clavier.
+
+* Le nom du programme .CBL … ecrire ou … modifier peut enfin  ˆtre 
+pass‚ en paramŠtre par la ligne de commandes du DOS.
+
+******************************************************************
+   ED_COBOL 1.4: (10/02/1991)
+
+* Nouvelles options comme la suppression d'une ligne complŠte  par 
+simple appuit sur ^Y, et bien d'autres options.
+
+* Lifting des ‚crans d'aide accessible en appuyant sur F5,  ou  en 
+tapant ^I.  Il  y  a  maintenant  au  moins  trois  ‚crans  d'aide 
+permettant une utilisation plus facile de cet ‚diteur de texte.
+
+* Ajout de nouveaux racourcis clavier. Je crois qu'il y en a trop, 
+je ne sais plus o— j'en suis ! Il  faudra  modifier  ‡a  dans  les 
+versions futures.
+
+******************************************************************
+   ED_COBOL 2.0: (10/03/1991)
+
+* Cette version … ‚t‚  entiŠrement  reprogramm‚e,  je  l'ai  faite 
+dans l'optique de la programmation par objet, ainsi chaque  module 
+du programme a  ‚t‚  d‚velopp‚  …  part.  Je  vais  ainsi  pouvoir 
+rajouter diff‚rentes options  dans  les  versions  suivantes  sans 
+avoir … tout refaire.
+
+* En pr‚vision pour la version 2.1:
+          - Gestion des erreurs de compilation  stock‚es  dans  le 
+fichier .LST (g‚n‚r‚ par le compilateur).
+          - Gestion des blocs: d‚placer, copier, effacer...
+
+* Voici comment utiliser ce programme:
+     - Touches de fonction:
+          - F1 : effacement du programme en cours.
+          - F2 : sauvegarde du programme en cours.
+          - F3 : chargement d'un nouveau programme.
+          - F4 : quitter l'‚diteur.
+          - F5 : informations et ‚crans d'aide.
+          - F6 : impression du programme  en  cours  (attention  … 
+avoir une imprimante branch‚e et en ‚tat de marche, je ne  regarde 
+par les erreurs qui pourraient planter la machine).
+          - F10 : changement du mode INDENT: lorsqu'il est  actif, 
+l'appuit sur RETURN vous place sous le premier caractŠre non blanc 
+de la ligne courante.
+     - D‚placements du curseur:
+          - Utilisez les flŠches.
+          - Page Up : monte d'une page dans le programme.
+          - Page Down : descend d'une page dans le programme.
+          - Home : positionne le curseur en d‚but de ligne.
+          - End : positionne le curseur en fin de ligne.
+          - Return  :  insŠre  une  ligne  ou  passe  …  la  ligne 
+suivante.
+     - Racourcis clavier:
+          - ^D : pour afficher/supprimer la date.
+          - ^L : pour charger un nouveau programme (LOAD).
+          - ^N : pour changer de programme (NEW).
+          - ^P : pour imprimer le programme courant (PRINT).
+          - ^Q : pour quitter l'‚diteur.
+          - ^S : pour sauver le programme courant (SAVE).
+          - ^T : pour afficher/supprimer l'heure.
+     - Touches d'‚dition:
+          - ^Y : pour effacer la ligne courante.
+          - Del : effacement du caractŠre sous le curseur.
+          - Backspace  :  effacement  du  caractŠre  …  gauche  du 
+curseur.
+          - Ins : pour passer du mode INSERT au mode NORMAL.
+          - Tab : pour inserer une tabulation.
+
+******************************************************************
+   ED_COBOL 2.1: (21/07/1991)
+
+* Cette documentation annule toutes les pr‚c‚dentes. Cette version 
+de ED_COBOL a ‚t‚ grandement  am‚lior‚e  alors  que  son  principe 
+d'utilisation n'a pas ‚t‚ modifi‚.
+
+
+* Voici l'‚num‚ration de toutes les touches accessibles,  et  leur 
+correspondance:
+
+
+               - Touches de fonction:
+
+     F1             Affichage des ‚crans d'aide  (contenant  cette 
+               documentation).
+     F2             Sauvegarde du fichier en cours d'‚laboration.
+     F3             Chargement d'un autre fichier (avec sauvegarde 
+               ‚ventuelle du fichier courant).
+     F4             Impression du fichier courant.
+     F5             Effacement du fichier courant, et commencement 
+               d'un autre fichier.
+     F6             Appel  au  DOS  Shell  (faites  en  sorte  que 
+               COMSPEC (variable de CONFIG.SYS) indique le  chemin 
+               d'accŠs … votre COMMAND.COM.
+     F10            Mise ON / OFF  du  mode  INDENT.  (Indentation 
+               automatique lors d'un changement de ligne).
+
+
+               - Touches de d‚placement du curseur:
+
+     Fleches        D‚placement  du  curseur  dans  la   direction 
+               indiqu‚e. Un d‚pacement d'une ligne … gauche  place 
+               le curseur … droite  de  la  ligne  pr‚c‚dente  (et 
+               r‚ciproquement).
+     PgUp           Monte d'une page dans le listing.
+     PgDn           Descend d'une page dans le listing.
+     Home           Positionne le curseur … gauche de la ligne.
+     End            Positionne le curseur … droite de la ligne.
+     Ctrl+Fleches:
+          - Gauche  Se positionne sur le d‚but du mot pr‚c‚dent.
+          - Droite  Se positionne sur la fin du mot suivant.
+     Ctrl+Pg:
+          - Up      Se positionne en haut du listing.
+          - Dn      Se positionne en fin du listing.
+
+
+               - Gestion des blocs:
+
+     Ctrl+K         Permet d'acc‚der … la gestion  des  blocs.  La 
+               touche suivante (combin‚e ou non  avec  CTRL)  sera 
+               prise   comme   une   commande   sur   les   blocs. 
+               Attention, dans ce systŠme, CTRL+A est ‚quivalent … 
+               A, vous pouvez donc ind‚pendament appuyez sur  CTRL 
+               ou ne pas le faire...tout d‚pend de vous.
+     Ctrl+B         Marque le d‚but du bloc. (la premiŠre ligne du 
+               bloc)
+     Ctrl+K         Marque la fin du bloc. (la derniŠre  ligne  du 
+               bloc)
+     Ctrl+H         Cache le bloc, il faudra  en  selectionner  un 
+               autre aprŠs cette touche.
+     Ctrl+V         D‚place le bloc courant et  le  met  avant  la 
+               ligne courante.
+     Ctrl+C         InsŠre  une  copie  du  bloc  avant  la  ligne 
+               courante.
+     Ctrl+Y         Efface  le  bloc  courant.  Attention,   cette 
+               op‚ration est irr‚m‚diable...
+     Ctrl+R         Lit un bloc sur disque.
+     Ctrl+W         Ecrit le bloc courant sur disque.
+     Ctrl+P         Imprime le bloc courant.
+
+
+               Autres touches prises en compte:
+
+     ESCou ALT+X   Ce sont les deux fa‡ons  de  quitter  ED_COBOL. 
+               N'oubliez pas de  sauver  votre  fichier  avant  de 
+               quitter l'‚diteur...
+     INS            Mise ON / OFF du mode  INSERT.  Lorsqu'il  est 
+               actif, chaque  caractŠre  frapp‚  d‚cale  la  ligne 
+               …  partir  du  curseur,  et  s'insŠre  donc  …   la 
+               position du curseur.
+     Ctrl+D         Mise ON  /  OFF  de  l'affichage  de  la  date 
+               systŠme.
+     Ctrl+T         Mise  ON  /  OFF  de  l'affichage  de  l'heure 
+               systŠme.
+     Ctrl+Y         Efface   la   ligne    courante.    (Op‚ration 
+               d‚finitive...)
+     Enter          InsŠre une ligne: - si le curseur est … gauche 
+               de la ligne courante, la ligne ins‚r‚e pr‚c‚dera la 
+               ligne actuelle.
+                                      - si le curseur est  ailleur 
+               sur la ligne courante, l'insertion de  la  nouvelle 
+               ligne  se  fera aprŠs la ligne courante.
+     TAB            Permet de passer de la colonne 7 … la marge A, 
+               puis … la marge B. Une fois la  marge  B  d‚pass‚e, 
+               l'appuit  sur cette touche d‚placera le curseur sur 
+               la tabulation suivante.
+     Suppr          Efface le caractŠre  qui  se  trouve  sous  le 
+               curseur.
+     Backspace      Efface le caractŠre … gauche du curseur.
+
+* Remarques g‚n‚rales:
+     - Les fichiers g‚n‚r‚s par ce programme sont au format ASCII, 
+chaque ligne est pr‚c‚d‚e de  6  espaces  (afin  de  pouvoir  ˆtre 
+compil‚es par un compilateur COBOL). Les deux extensions utilis‚es 
+sont les suivantes: .CBL (pour les listings)  et  .BLK  (pour  les 
+blocs).
+     - Avant de passer au DOS Shell, je vous recommande de  sauver 
+votre fichier, on n'est jamais … l'abri d'une erreur  de  m‚moire, 
+et d'un plantage. Il peut aussi arriver que vous croyant sous DOS, 
+vous arr‚tiez l'ordinateur sans avoir sauv‚ votre dur labeur...
+     - Les accŠs  disque  sont  normalement  tous  control‚s,  une 
+erreur (pas de place sur disque,  pas  de  disque,...)  vous  sera 
+signal‚e et l'op‚ration sera abandonn‚e en  cas  de  problŠme.  Je 
+vous conseille de faire  trŠs  attention  aux  messages  que  vous 
+donnera ce programme...
+     - Je vous recommande de sectionner votre travail: un  fichier 
+pour chaque DIVISION ou SECTION, une fois chacun  fini,  regroupez 
+les grƒce … LK_COBOL.EXE. Puis compilez le r‚sultat.
+     - Vous pouvez lancer ED_COBOL en lui  sp‚cifiant  le  nom  du 
+fichier .CBL (par d‚faut) que vous voulez ‚diter.
+
+******************************************************************
+Vous pouvez me contacter pour me donner des id‚es de programmes et 
+utilitaires,  mais  aussi  pour  m'indiquer  les  bugs  que   vous 
+trouverez dans mes programmes … l'adresse suivante (ou … l'adresse 
+indiqu‚e dans le programme):
+
+
+(maj du 30/12/2024 : adresse postale de l'epoque retiree du fichier, me contacter depuis https://developpeur-pascal.fr ou https://olfsoftware.fr pour toute question)
+
+
+******************************************************************
+
+Mise … jour de cette documentation le 25/06/1992.
+
